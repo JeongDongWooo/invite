@@ -1,0 +1,46 @@
+<html>
+<head>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('f9a22f5b5e87b83238a6cfdd09e0f4a2');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '제목',
+        description: '설명',
+        imageUrl:
+          'https://cdn.discordapp.com/attachments/1041000186643746887/1074810563693117490/2023-02-13_8.58.44.png',
+        link: {
+          mobileWebUrl: 'https://www.daewoominjeong.kr',
+          webUrl: 'https://www.daewoominjeong.kr',
+        },
+      },
+      social: {
+        likeCount: 99, //99999가 최대입니다
+        commentCount: 99, //99999가 최대입니다
+        sharedCount: 99, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '버튼1 글자',
+          link: {
+            mobileWebUrl: 'https://www.daewoominjeong.kr',
+            webUrl: 'https://www.daewoominjeong.kr',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
